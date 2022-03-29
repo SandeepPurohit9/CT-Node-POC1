@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/SandeepPurohit9/CT-Node-POC1/issues"
   },
-  "homepage": "https://github.com/SandeepPurohit9/CT-Node-POC1#readme"
+  "homepage": "https://github.com/SandeepPurohit9/CT-Node-POC1#readme",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }

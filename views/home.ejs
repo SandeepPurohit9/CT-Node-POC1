@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POC1</title>
+</head>
+<body>
+    <div class="row">
+        <a href="/">Home</a>
+        <a href="/">Details</a>
+        <a href="/">Logout</a>
+    </div>
+    <h1><%=heading + userName%></h1>
+    <h2> <span id='date-time'></span></h2>
+   
+
+</body>
+<script>
+    var dt = new Date();
+    document.getElementById('date-time').innerHTML=dt;
+    </script>
+</html>
