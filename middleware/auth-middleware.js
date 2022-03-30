@@ -11,6 +11,7 @@ module.exports = {
         const clientSession =req.session;
         if(clientSession.userid && !publicPath.includes(req.path))
         {
+            req.timeStore = new Date().toLocaleTimeString();
             next()
         }
         else{
