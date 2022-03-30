@@ -41,7 +41,7 @@ app.use(session({
 // cookie parser middleware
 app.use(cookieParser());
 
-// a variable to save a session
+// variable to save a session
 var ClientSession;
 
 
