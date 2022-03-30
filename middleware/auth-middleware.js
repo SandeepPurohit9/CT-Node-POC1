@@ -1,25 +1,20 @@
 module.exports = {
     /**
-     * @description middleware function to verify token sent with request 
+     * @description middleware function to verify if user is authorized to view page
      * @param {*} req 
      * @param {*} res 
      * @param {*} next 
      */
-    verifyToken: (req, res, next) => {
-
+    verifySession: (req, res, next) => {
+        const publicPath = ['/', '/logout']
         // checks if headers have authorization token
-        let token = req.headers['Authorization'];
-
-        let publicPaths = [ 
-            '/',
-            '/login'
-        ];
-        console.log(req.path)
-        if (!token && !publicPaths.includes(req.path)) {
-          return res.status(401).send({ auth: false, message: 'No token provided.' });
+        const clientSession =req.session;
+        if(clientSession.userid && !publicPath.includes(req.path))
+        {
+            next()
         }
         else{
-            next();
+          return res.status(401).render('notAuth');
         }
     }
 }    
